@@ -7,7 +7,7 @@
 [![support-snowflake](https://img.shields.io/badge/support-Snowflake-7faecd?logo=snowflake&logoColor=7faecd)](https://docs.snowflake.com?ref=infinitelambda)
 [![support-dbt](https://img.shields.io/badge/support-dbt%20v1.6+-FF694B?logo=dbt&logoColor=FF694B)](https://docs.getdbt.com?ref=infinitelambda)
 
-Tag-based masking policies management in Snowflake ❄️ 🏷️
+Triggering alerts from Data Warehouse managed by dbt 🚀
 
 > [!TIP]
 > 📖 For more details, please help to visit the ⭐ [Documentation site](https://dbt-alert.iflambda.com/latest/) (or go to the [docs/index.md](./docs/index.md)) for more details
