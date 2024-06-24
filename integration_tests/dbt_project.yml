@@ -1,0 +1,10 @@
+name: 'dbt_alert_test'
+version: '0.0.0'
+config-version: 2
+
+profile: 'dbt_alert'
+
+clean-targets:
+  - "target"
+  - "dbt_packages"
+  - "logs"

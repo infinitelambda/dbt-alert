@@ -1,0 +1,16 @@
+name: 'dbt_alert'
+config-version: 2
+require-dbt-version: [">=1.6.0", "<2.0.0"]
+
+profile: 'dbt_alert'
+
+model-paths: ["models"]
+macro-paths: ["macros"]
+
+clean-targets:
+  - "target"
+  - "dbt_packages"
+  - "logs"
+
+vars:
+  
