@@ -12,7 +12,8 @@ copyright: Copyright &copy; 2024 Infinite Lambda
 nav:
   - 📦 Overview: index.md
   - User Guides:
-    - Getting Started: getting-started.md
+    - Getting Started with Snowflake: getting-started-snowflake.md
+    - Adding your job: adding-your-job.md
   - Development:
     - Contribution Guideline: contributing.md
   - External Links:
