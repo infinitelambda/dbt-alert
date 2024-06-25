@@ -8,3 +8,10 @@ clean-targets:
   - "target"
   - "dbt_packages"
   - "logs"
+
+vars:
+  dbt_alert__jobs: "sample_2,sample_3"
+
+on-run-end:
+  - "{{ dbt_alert.execute_job(job_name='sample_1') }}"
+  - "{{ dbt_alert.execute_jobs() }}" # rely on `dbt_alert__jobs` variable

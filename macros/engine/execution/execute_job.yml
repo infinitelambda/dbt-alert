@@ -1,0 +1,28 @@
+macros:
+  - name: execute_job
+    description: |
+      Execute the given job (by name)
+
+      Steps:
+
+      1. Create your job macro e.g. jobs/dbt_alert_job__sample_1.sql. Its name MUST start with `dbt_alert_job__`.
+
+      2. Get your job name e.g. sample_1 - let's remove the prefix `dbt_alert_job__`
+
+      3. Decide the execute the job:
+
+      - Hook (`on-run-end`):
+
+      ```yaml
+      {% raw %}
+      on-run-end:
+        - "{{ dbt_alert.execute_job(job_name='sample_1') }}"
+      {% endraw %}
+      ```
+
+      - Operation:
+      ```bash
+      dbt run-operation execute_job --vars '{job_name: sample_1}'
+      # or a dry run
+      dbt run-operation execute_job --vars '{job_name: sample_1}' --args '{dry_run: true}'
+      ```

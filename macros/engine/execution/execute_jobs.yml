@@ -1,0 +1,25 @@
+macros:
+  - name: execute_jobs
+    description: |
+      Execute the all jobs (by name) given the list of values splitted by comma in `dbt_alert__jobs` variable.
+      
+      For each job, it uses `dbt_alert.execute_job` macro to perform the run.
+
+      - Hook (`on-run-end`):
+
+      ```yaml
+      {% raw %}
+      vars:
+        dbt_alert__jobs: "sample_2,sample_3"
+
+      on-run-end:
+        - "{{ dbt_alert.execute_jobs() }}"
+      {% endraw %}
+      ```
+
+      - Operation:
+      ```bash
+      dbt run-operation execute_jobs --vars '{dbt_alert__jobs: "sample_2,sample_3"}'
+      # or a dry run
+      dbt run-operation execute_jobs --vars '{dbt_alert__jobs: "sample_2,sample_3"}' --args '{dry_run: true}'
+      ```

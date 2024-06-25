@@ -1,0 +1,25 @@
+macros:
+  - name: create_or_get_resource
+    description: |
+      Generate the managed SQL script for the DWH Notification Integration object.
+
+      Returns the object name if called by others by default.
+
+      Usage:
+
+      - Get script for a manual execution:
+      ```bash
+      dbt run-operation create_or_get_resource --args '{create: true}'
+      ```
+
+      - Get script for a manual execution, with diffent role assignee:
+      ```bash
+      dbt run-operation create_or_get_resource --args '{create: true, usage_role: "my_role"}'
+      ```
+
+      - Return the notification integration name in other macro(s):
+      ```sql
+      {% raw %}
+      {% set integration_id = dbt_alert.create_or_get_resource() %}
+      {% endraw %}
+      ```

@@ -1,0 +1,6 @@
+macros:
+  - name: get_mailing_list
+    description: |
+      Return the mailing list splitted by comma from `dbt_alert__mailing_list` variable.
+
+      It's mandatory to provide the emails, throws an error otherwise.

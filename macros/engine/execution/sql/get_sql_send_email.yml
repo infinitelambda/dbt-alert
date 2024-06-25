@@ -1,0 +1,9 @@
+macros:
+  - name: get_sql_send_email
+    description: |
+      Main function of the alert sending as an email.
+
+      Generate SQL script and execute a the alert query, collect failed count, and aim to send an email if failed count > 0.
+
+      Behind the scenes in Snowflake, it uses `SYSTEM$SEND_EMAIL` function
+      within the `execute immediate` statement ([docs](https://docs.snowflake.com/en/user-guide/notifications/snowflake-notifications))
