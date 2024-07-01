@@ -85,7 +85,7 @@ dbt-alert-verify = [
 ]
 dbt-alert-test = [
   {cmd = "dbt deps --project-dir integration_tests"},
-  {cmd = "dbt TODO"},
+  {cmd = "dbt run --project-dir integration_tests"},
 ]
 build-doc = [
   {cmd = "dbt deps --project-dir integration_tests"},
