@@ -1,0 +1,4 @@
+models:
+  - name: verify_notification_integration_object_creation
+    data_tests:
+      - not_empty

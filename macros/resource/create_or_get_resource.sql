@@ -16,7 +16,7 @@
       allowed_recipients = ('{{ allowed_emails }}')
       enabled = true
       comment = "{{ target.name | upper }} Notification Integration object used for {{ project_name }} dbt project";
-    grant usage on integration {{ integration_id }} to role {{ usage_role }};
+    grant usage on integration {{ integration_id }} to role {{ usage_role or target.role }};
 
   {%- endset %}
 
