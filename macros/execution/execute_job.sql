@@ -1,7 +1,7 @@
 {% macro execute_job(job_name, dry_run=false) -%}
 
   {% set JOB_PREFIX = "dbt_alert_job__" %}
-  {% if not job_name.starts_with(JOB_PREFIX) %}
+  {% if not job_name.startswith(JOB_PREFIX) %}
     {% set job_name = JOB_PREFIX ~ (job_name | trim) %}
   {% endif %}
 
@@ -19,10 +19,10 @@
     {% set query = dbt_alert.get_sql_send_email(query=job_query, title=job_title) %}
 
     {{ log("query: " ~ query, info=True) if execute }}
-    {% if not dry_run %}
-      {{ log("[RUN]: " ~ this, info=True) if execute }}
+    {% if not dry_run and execute %}
+      {{ log("[RUN]: " ~ job_macro.get_name(), info=True) }}
       {% set results = run_query(query) %}
-      {{ log("Completed: " ~ results.print_json(), info=True) }}
+      {{ log("Completed: " ~ results.columns[0].values()[0], info=True) }}
     {% endif %}
 
   {% else %}
@@ -30,6 +30,6 @@
     {{ exceptions.warn("Could NOT find the job macro, SKIPPED!") }}
 
   {% endif %}
-  
+
 
 {%- endmacro %}

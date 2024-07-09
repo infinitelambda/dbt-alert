@@ -18,7 +18,7 @@
       case
         when failed_count > 0 then
           call system$send_email(
-            '{{ dbt_alert__create_or_get_resource() }}',
+            '{{ dbt_alert.create_or_get_resource() }}',
             '{{ dbt_alert.get_mailing_list() }}',
             '{{ title or "⚠️ Alert!"}} [' || :failed_count || '] | {{ utcnow }} (UTC)',
             '
