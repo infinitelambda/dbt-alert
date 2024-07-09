@@ -27,7 +27,7 @@
 
   {% else %}
 
-    {{ exceptions.warn("Could NOT find the job macro, SKIPPED!") }}
+    {{ exceptions.warn("Could NOT find the job macro " ~ job_name ~ ". SKIPPED!") }}
 
   {% endif %}
 

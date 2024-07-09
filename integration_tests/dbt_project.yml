@@ -20,4 +20,4 @@ on-run-start:
 
 on-run-end:
   - "{{ dbt_alert.execute_job(job_name='sample_1') }}"
-#   - "{{ dbt_alert.execute_jobs() }}" # rely on `dbt_alert__jobs` variable
+  - "{{ dbt_alert.execute_jobs() }}" # rely on `dbt_alert__jobs` variable

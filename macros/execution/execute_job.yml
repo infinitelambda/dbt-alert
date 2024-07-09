@@ -22,7 +22,7 @@ macros:
 
       - Operation:
       ```bash
-      dbt run-operation execute_job --vars '{job_name: sample_1}'
+      dbt run-operation execute_job --args '{"job_name": "sample_1"}'
       # or a dry run
-      dbt run-operation execute_job --vars '{job_name: sample_1}' --args '{dry_run: true}'
+      dbt run-operation execute_job --args '{"job_name": "sample_1", "dry_run": True}'
       ```
