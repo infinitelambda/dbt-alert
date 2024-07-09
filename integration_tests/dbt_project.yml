@@ -18,6 +18,6 @@ on-run-start:
     {{ log("💡 Integration object [" ~ dbt_alert.create_or_get_resource(create=true) ~ "] will need manually creating to avoid failing tests", true) if execute }}
     {{ log("💡 See above generated script", true) if execute }}
 
-# on-run-end:
-#   - "{{ dbt_alert.execute_job(job_name='sample_1') }}"
+on-run-end:
+  - "{{ dbt_alert.execute_job(job_name='sample_1') }}"
 #   - "{{ dbt_alert.execute_jobs() }}" # rely on `dbt_alert__jobs` variable
