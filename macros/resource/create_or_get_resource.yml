@@ -7,13 +7,14 @@ macros:
 
       Usage:
 
-      - Get script for a manual execution:
+      - Get script for a manual execution (requires `ACCOUNTADMIN` role):
       ```bash
       dbt run-operation create_or_get_resource --args '{create: true}'
       ```
 
       - Get script for a manual execution, with diffent role assignee:
       ```bash
+      dbt run-operation create_or_get_resource --args '{create: true' # use `target.role`
       dbt run-operation create_or_get_resource --args '{create: true, usage_role: "my_role"}'
       ```
 
