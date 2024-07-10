@@ -54,7 +54,7 @@ Jump into [Getting Started](getting-started-snowflake.md) page for more details 
 Here are the full list of built-in variables:
 
 - `dbt_alert__mailing_list`: Mandatory
-- `dbt_alert__jobs`: Mandantory if using `execute_jobs` macro
+- `dbt_alert__jobs`: Mandatory if using `execute_jobs` macro
 - `dbt_alert__dbt_cloud_access_url`
 - `dbt_alert_notification_integration_id`
 - `dbt_alert_notification_integration_usage_role`

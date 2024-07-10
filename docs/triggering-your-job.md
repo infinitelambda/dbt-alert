@@ -82,7 +82,7 @@ Sample script:
 
 ### **Add your job name to `dbt_alert__jobs` variable**
 
-In `dbt_project.yml` add name of alert job (exclude the prefix `dbt_alert_job__`) to varible `dbt_alert__jobs` so that macro `execute_jobs` can trigger the jobs that you expect.
+In `dbt_project.yml` add name of alert job (exclude the prefix `dbt_alert_job__`) to variable `dbt_alert__jobs` so that macro `execute_jobs` can trigger the jobs that you expect.
 
 For example:
 ```yml

@@ -12,7 +12,7 @@ macros:
       dbt run-operation create_or_get_resource --args '{create: true}'
       ```
 
-      - Get script for a manual execution, with diffent role assignee:
+      - Get script for a manual execution, with different role assignee:
       ```bash
       dbt run-operation create_or_get_resource --args '{create: true' # use `target.role`
       dbt run-operation create_or_get_resource --args '{create: true, usage_role: "my_role"}'

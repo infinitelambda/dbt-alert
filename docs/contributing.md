@@ -68,7 +68,7 @@ Run `poe dbt-alert-verify` for verifying the connection ✅
 
 We're trying to also maintain the code quality leveraging [sqlfluff](https://sqlfluff.com/).
 
-It is highly encouraged that you format the code before commiting using the below `poe` helpers:
+It is highly encouraged that you format the code before committing using the below `poe` helpers:
 
 ```bash
 poe lint    # check your code, we run this check in CI

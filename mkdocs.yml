@@ -1,7 +1,7 @@
 site_name: dbt Alert
 site_url: https://infinitelambda.github.io/dbt-alert/
 site_author: Infinite Lambda
-site_description: Offical documentation of `dbt-alert` dbt package
+site_description: Official documentation of `dbt-alert` dbt package
 
 repo_name: infinitelambda/dbt-alert
 repo_url: https://github.com/infinitelambda/dbt-alert

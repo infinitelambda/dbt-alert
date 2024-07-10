@@ -17,4 +17,4 @@ vars:
   # dbt_alert__dbt_cloud_access_url: "cloud.getdbt.com" # check https://docs.getdbt.com/docs/cloud/manage-access/sso-overview#auth0-multi-tenant-uris
   # dbt_alert_notification_integration_id: my_notification_integration_name # default value = "ni_dbt_alert_" ~ project_name ~ "_" ~ target.name
   # dbt_alert_notification_integration_usage_role: my_notification_integration_usage_role # default value = target.role
-  # dbt_alert__jobs: <list of job names splitted by comma> # job name doesn't need to include prefix of "dbt_alert_job__"
+  # dbt_alert__jobs: <list of job names split by comma> # job name doesn't need to include prefix of "dbt_alert_job__"
