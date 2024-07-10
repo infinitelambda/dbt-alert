@@ -1,7 +1,7 @@
 macros:
   - name: execute_jobs
     description: |
-      Execute the all jobs (by name) given the list of values splitted by comma in `dbt_alert__jobs` variable.
+      Execute the all jobs (by name) given the list of values split by comma in `dbt_alert__jobs` variable.
       
       For each job, it uses `dbt_alert.execute_job` macro to perform the run.
 
