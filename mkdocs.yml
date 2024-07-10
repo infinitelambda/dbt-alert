@@ -13,7 +13,7 @@ nav:
   - 📦 Overview: index.md
   - User Guides:
     - Getting Started with Snowflake: getting-started-snowflake.md
-    - Adding your job: adding-your-job.md
+    - Triggering your job: triggering-your-job.md
   - Development:
     - Contribution Guideline: contributing.md
   - External Links:
