@@ -17,6 +17,7 @@ Let's add your jobs then utilize the package `dbt-alert` to trigger your jobs.
 To set up a job that triggers alerts, follow these steps:
 
 ### **Create a Job Macro:**
+
 Place your job macro under the `jobs/` directory.
 
 The macro name **MUST** start with `dbt_alert_job__`. Eg: `jobs/dbt_alert_job__sample_1.sql`.
@@ -47,6 +48,7 @@ Sample of your macro:
 📖 Check [integration_tests/macros/sample-jobs](https://github.com/infinitelambda/dbt-alert/tree/main/integration_tests/macros/sample-jobs) for your reference.
 
 ### ✍️ **Modify the `alert_query`:**
+
 Inside the macro, set the `alert_query`. It should follow the same approach as the [dbt singuar test](https://docs.getdbt.com/docs/build/data-tests#singular-data-tests) query.
 
 Sample script:
@@ -72,6 +74,7 @@ Sample script:
 ```
 
 ### ✍️ **Customize the `alert_title`:**
+
 Set the `alert_title` to a concise email subject for your alert.
 
 Sample script:
@@ -85,6 +88,7 @@ Sample script:
 In `dbt_project.yml` add name of alert job (exclude the prefix `dbt_alert_job__`) to variable `dbt_alert__jobs` so that macro `execute_jobs` can trigger the jobs that you expect.
 
 For example:
+
 ```yml
 vars:
   dbt_alert__jobs: "sample_1,sample_2"
@@ -130,5 +134,21 @@ For multiple alert jobs:
   on-run-end:
     - "{{ dbt_alert.execute_jobs() }}"
 ```
+
+Here is a **sample alert sent to a Slack channel**
+
+![sample-slack-alert](./assets/img/sample-slack-alert.png)
+
+![sample-slack-alert-expanded](./assets/img/sample-slack-alert-expanded.png)
+
+In the above sample result, you might notice 2 minor useful things (which are built automatically):
+
+- **Job metadata** will be added together with the configured Email Title e.g. `⚠️ Sample Alert [1] | 2024-07-10 12:05:14 (UTC)`
+  - Configured Email Title = `⚠️ Sample Alert`
+  - `Failed Count` = `[1]`
+  - `Trigger At Timestamp` = `2024-07-10 12:05:14 (UTC)`
+- **Run metadata** is enriched in the Email Body
+  - `Run URL`: `run/{runid}` hyperlink will be the link to the dbt Cloud Run URL if you run the job over there
+  - `Query Used`: Actual executed query run by the job
 
 Happy dbt-ing and mindful alerting 🚀 💫
