@@ -44,7 +44,14 @@ And run `dbt deps` to install the package!
 
 📹 Here is a quick live demo:
 
-TODO
+<div>
+  <a href="https://www.loom.com/share/e2d8029aff0f42af8654e140051722d1">
+    <p>Quick demo dbt-alert package - Watch Video</p>
+  </a>
+  <a href="https://www.loom.com/share/e2d8029aff0f42af8654e140051722d1">
+    <img style="max-width:300px;" src="https://cdn.loom.com/sessions/thumbnails/e2d8029aff0f42af8654e140051722d1-with-play.gif">
+  </a>
+</div>
 
 ## How to Contribute
 
