@@ -144,11 +144,11 @@ Here is a **sample alert sent to a Slack channel**
 In the above sample result, you might notice 2 minor useful things (which are built automatically):
 
 - **Job metadata** will be added together with the configured Email Title e.g. `⚠️ Sample Alert [1] | 2024-07-10 12:05:14 (UTC)`
-  - Configured Email Title = `⚠️ Sample Alert`
-  - `Failed Count` = `[1]`
-  - `Trigger At Timestamp` = `2024-07-10 12:05:14 (UTC)`
+    - Configured Email Title = `⚠️ Sample Alert`
+    - `Failed Count` = `[1]`
+    - `Trigger At Timestamp` = `2024-07-10 12:05:14 (UTC)`
 - **Run metadata** is enriched in the Email Body
-  - `Run URL`: `run/{runid}` hyperlink will be the link to the dbt Cloud Run URL if you run the job over there
-  - `Query Used`: Actual executed query run by the job
+    - `Run URL`: `run/{runid}` hyperlink will be the link to the dbt Cloud Run URL if you run the job over there
+    - `Query Used`: Actual executed query run by the job
 
 Happy dbt-ing and mindful alerting 🚀 💫
