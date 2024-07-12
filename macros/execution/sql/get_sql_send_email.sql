@@ -24,7 +24,7 @@
             '
               <p>This is auto-triggered by the job run: <a href=https://{{ var("dbt_alert__dbt_cloud_access_url", "cloud.getdbt.com") }}/deploy/{{ env_var('DBT_CLOUD_ACCOUNT_ID', 'manual') }}/projects/{{ env_var('DBT_CLOUD_PROJECT_ID', 'manual') }}/runs/{{ env_var('DBT_CLOUD_RUN_ID', 'manual') }}" >runs/{{ env_var('DBT_CLOUD_RUN_ID', 'manual') }}</a></p>
               <p>SQL query used as follows:</p>
-              <pre><code> {{ query }} </code></pre>
+              <pre><code> {{ query | replace("'", "''") }} </code></pre>
             ',
             'text/html'
           );
