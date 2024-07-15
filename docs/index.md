@@ -70,7 +70,7 @@ Here are the full list of built-in variables:
 
 `dbt-alert` is an open-source dbt package. Whether you are a seasoned open-source contributor or a first-time committer, we welcome and encourage you to contribute code, documentation, ideas, or problem statements to this project.
 
-👉 See [CONTRIBUTING guideline](https://dbt-alert.iflambda.com/latest/nav/dev/contributing.html) for more details or check out [CONTRIBUTING.md](https://github.com/infinitelambda/dbt-alert/tree/main/CONTRIBUTING.md)
+👉 See [CONTRIBUTING guideline](./contributing.md) for more details or check out [CONTRIBUTING.md](https://github.com/infinitelambda/dbt-alert/tree/main/CONTRIBUTING.md)
 
 🌟 And then, kudos to **our beloved Contributors**:
 
